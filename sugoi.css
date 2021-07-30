@@ -1,0 +1,66 @@
+html, body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background-color: #efebe9;
+    color: #37474f;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#sugoi-title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#sugoi-content-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sugoi-content-container h1 {
+    font-size: 10vw;
+}
+#sugoi-content-container h2 {
+    font-size: 4vw;
+}
+
+#sugoi-content-container a {
+    text-decoration: none;
+    color:#37474f;
+}
+
+.sugoi-rainbow {
+    animation: sugoi-rainbow 1.5s linear infinite;
+}
+
+@keyframes sugoi-rainbow {
+    0%, 100% {
+        color: #ff1744;
+    }
+    12.5% {
+        color: #d500f9;
+    }
+    25% {
+        color: #3d5afe;
+    }
+    37.5% {
+        color: #00b0ff;
+    }
+    50% {
+        color: #1de9b6;
+    }
+    62.5% {
+        color: #76ff03;
+    }
+    75% {
+        color: #ffea00;
+    }
+    87.5% {
+        color: #ffea00;
+    }
+
+}
