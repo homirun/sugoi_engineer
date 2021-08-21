@@ -11,11 +11,17 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+const renderReactDOM = () => {
+    const container = document.getElementById("app")
+    if (container) {
+        ReactDOM.render(<App />, container)
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     ReactDOM.render(<App />, document.getElementById("app"))
 })
 
-// turbolinksによる画面遷移時は DOMContentLoaded ではなく turbolinks:load イベントが発火する
 document.addEventListener("turbolinks:load", () => {
     ReactDOM.render(<App />, document.getElementById("app"))
 })
