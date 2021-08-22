@@ -1,3 +1,160 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+html, body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  background-color: #efebe9;
+  color: #37474f;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+#sugoi-title {
+  margin: 0;
+  text-align: center;
+}
+
+#sugoi-title.start-animation {
+  animation: move-title .7s forwards;
+}
+
+@keyframes move-title {
+  0% {
+    transform: translateX(30vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(0vw) translateY(-15vh);
+  }
+}
+
+#sugoi-form-engineer {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 8vw;
+  input[type="text"] {
+    width: 30vw;
+    font-size: 6vw;
+    border: 0;
+    border-bottom: solid 2px;
+    background-color: #efebe9;
+  }
+  input[type="text"]:focus {
+    border: 0;
+    border-bottom: solid 2.5px #00b0ff;
+    outline: 0;
+  }
+}
+
+#sugoi-form-engineer.start-animation {
+  animation: fade-in-form .7s forwards;
+}
+
+@keyframes fade-in-form {
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(-15vh);
+  }
+}
+
+#sugoi-form-submit {
+  width: 100%;
+  text-align: center;
+  input[type="submit"]{
+    margin-top: 2vh;
+    border: none;
+    background-color: #ef6c00;
+    color: #efebe9;
+    font-size: 2vw;
+    border-radius: 10vw;
+    width: 7vw;
+  }
+  input[type="submit"]:hover{
+    background-color: #e65100;
+  }
+}
+
+#sugoi-content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#sugoi-content-container h1 {
+  font-size: 8vw;
+  margin: 0 0 0 1vw;
+}
+#sugoi-content-container h2 {
+  font-size: 4vw;
+}
+
+#sugoi-content-container a {
+  text-decoration: none;
+  color:#37474f;
+}
+
+#sugoi-message {
+  font-size: 2vw;
+  text-align: center;
+}
+
+#sugoi-message.start-animation {
+  animation: fade-in-message .7s;
+}
+
+@keyframes fade-in-message {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.sugoi-rainbow {
+  animation: sugoi-rainbow 1.5s linear infinite;
+}
+
+@keyframes sugoi-rainbow {
+  0%, 100% {
+    color: #ff1744;
+  }
+  12.5% {
+    color: #d500f9;
+  }
+  25% {
+    color: #3d5afe;
+  }
+  37.5% {
+    color: #00b0ff;
+  }
+  50% {
+    color: #1de9b6;
+  }
+  62.5% {
+    color: #76ff03;
+  }
+  75% {
+    color: #ffea00;
+  }
+  87.5% {
+    color: #ffea00;
+  }
+
+}
