@@ -11,32 +11,78 @@ html, body {
   padding: 0;
 }
 
+#app {
+  height: 100%;
+  width: 100%;
+}
+
 #sugoi-title {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 }
 
 #sugoi-title.start-animation {
-  animation: anim .7s;
+  animation: move-title .7s forwards;
 }
 
-@keyframes anim {
+@keyframes move-title {
   0% {
-    transform: translateX(30vw);
+    transform: translateX(30vw) translateY(0vh);
   }
 
   100% {
-    transform: translateX(0vw);
+    transform: translateX(0vw) translateY(-15vh);
   }
 }
 
-#sugoi-form {
+#sugoi-form-engineer {
   margin: 0 auto;
   text-align: center;
   font-size: 8vw;
   input[type="text"] {
     width: 30vw;
-    font-size: 8vw;
+    font-size: 6vw;
+    border: 0;
+    border-bottom: solid 2px;
+    background-color: #efebe9;
+  }
+  input[type="text"]:focus {
+    border: 0;
+    border-bottom: solid 2.5px #00b0ff;
+    outline: 0;
+  }
+}
+
+#sugoi-form-engineer.start-animation {
+  animation: fade-in-form .7s forwards;
+}
+
+@keyframes fade-in-form {
+  0% {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(-15vh);
+  }
+}
+
+#sugoi-form-submit {
+  width: 100%;
+  text-align: center;
+  input[type="submit"]{
+    margin-top: 2vh;
+    border: none;
+    background-color: #ef6c00;
+    color: #efebe9;
+    font-size: 2vw;
+    border-radius: 10vw;
+    width: 7vw;
+  }
+  input[type="submit"]:hover{
+    background-color: #e65100;
   }
 }
 
@@ -46,11 +92,13 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
 #sugoi-content-container h1 {
   font-size: 8vw;
+  margin: 0 0 0 1vw;
 }
 #sugoi-content-container h2 {
   font-size: 4vw;
@@ -59,6 +107,24 @@ html, body {
 #sugoi-content-container a {
   text-decoration: none;
   color:#37474f;
+}
+
+#sugoi-message {
+  font-size: 2vw;
+  text-align: center;
+}
+
+#sugoi-message.start-animation {
+  animation: fade-in-message .7s;
+}
+
+@keyframes fade-in-message {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 .sugoi-rainbow {
