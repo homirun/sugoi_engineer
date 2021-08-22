@@ -25,14 +25,16 @@ const Top = (props) => {
 
         try {
             const data = new FormData();
+            const token = document.querySelector<HTMLMetaElement>('meta[name="csrf-token"]')?.content;
             data.append("engineer[name]", engineerName);
 
-            const res = await axios.post("/engineers.json", data);
+            const res = await axios.post("/engineers.json", data, {headers: {"X-CSRF-Token": token }});
+            console.log(res)
             setEngineerName("");
             alert("https://sugoi.engineer/" + engineerName + "/ の作成に成功しました");
 
         } catch (e) {
-
+            console.log(e);
         }
     }
 
